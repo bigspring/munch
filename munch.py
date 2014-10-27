@@ -113,9 +113,9 @@ def install(src, dst):
 
 if __name__ == '__main__':
 
-    bin_path = os.getenv('HOME') + '/.bin/munch'
+    bin_path = '/usr/local/bin/munch'
     src = os.path.realpath(__file__) # current filepath
-    dst = os.getenv('HOME') + '/.bin/' # bin directory
+    dst = '/usr/local/bin/' # bin directory
     branch = 'master'
     project_name = False
     installed = False
