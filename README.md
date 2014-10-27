@@ -6,9 +6,9 @@ A clever little script for installing WP and dependencies in seconds.
 instructions
 ------------
 
-Run the script from your repo to install munch:
+Run the script from the repo to install munch (sudo required):
 ```
-./munch.py
+sudo ./munch.py
 ```
 
 Thereafter you can simply navigate to your desired directory and run:
