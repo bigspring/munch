@@ -36,7 +36,6 @@ class Installer:
         try:
             subprocess.call(['chmod', '+x', self.src])
             shutil.copy2(self.src, self.dst + self.name)
-            #os.renames(self.src, self.dst + self.name)
             print 'Munch installed successfully.'
             return True
         except:
