@@ -7,6 +7,14 @@ class Installer:
         self.name = 'munch'
         self.src = src
         self.dst = dst
+        self.errors = []
+        self.make_dir()
+        #self.setup_terminal_notifier()
+        self.setup_munch()
+
+    def make_dir(self):
+        if not os.path.exists(self.dst):
+            os.makedirs(self.dst)
 
     def setup_terminal_notifier(self):
         """Install Terminal Notifier with Homebrew"""
@@ -19,6 +27,7 @@ class Installer:
         except:
             print "-------------------------------------"
             print "There was a problem installing Terminal Notifier. Please try again or install manually."
+            self.problem.append('Problem installing Terminal Notifier.')
             return False
 
     def setup_munch(self):
@@ -26,10 +35,12 @@ class Installer:
         print "Installing Munch..."
         try:
             subprocess.call(['chmod', '+x', self.src])
-            os.renames(self.src, self.dst + self.name)
+            shutil.copy2(self.src, self.dst + self.name)
+            #os.renames(self.src, self.dst + self.name)
+            print 'Munch installed successfully.'
             return True
         except:
-            print "There was a problem installing Munch."
+            self.problem.append('Problem installing Munch.')
             return False
 
 
@@ -96,8 +107,9 @@ def correct_usage():
 def install(src, dst):
     """Run installer"""
     install = Installer(src, dst)
-    if install.setup_munch() == False:
-        print "Exiting Munch due to error..."
+    if len(install.errors) > 0:
+        for error in install.errors:
+            print error
         sys.exit(2)
 
 if __name__ == '__main__':
