@@ -97,6 +97,7 @@ def install(src, dst):
     """Run installer"""
     install = Installer(src, dst)
     if install.setup_munch() == False:
+        print "Exiting Munch due to error..."
         sys.exit(2)
 
 if __name__ == '__main__':
