@@ -6,7 +6,7 @@ A clever little script for installing WP and dependencies in seconds.
 instructions
 ------------
 
-Run the script from Terminal to install munch:
+Run the script from your repo to install munch:
 ```
 ./munch.py
 ```
@@ -15,6 +15,7 @@ Thereafter you can simply navigate to your desired directory and run:
 ```
 munch
 ```
+The former command will ALWAYS reinstall.
 
 options
 -------

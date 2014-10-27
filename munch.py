@@ -114,6 +114,8 @@ def install(src, dst):
 
 if __name__ == '__main__':
 
+    print __file__
+    sys.exit(2)
     bin_path = os.getenv('HOME') + '/.bin/munch'
     src = os.path.realpath(__file__) # current filepath
     dst = os.getenv('HOME') + '/.bin/' # bin directory
@@ -135,8 +137,8 @@ if __name__ == '__main__':
         elif opt in ('-b', '--branch'):
             branch = arg
 
-    # install Munch if not found, otherwise run
-    if not os.path.isfile(bin_path):
+    # install Munch if not found or installing from repo; otherwise run
+    if not os.path.isfile(bin_path) or __file__ == './munch.py':
         install(src, dst)
     else:
         munch = Munch(branch, project_name)
