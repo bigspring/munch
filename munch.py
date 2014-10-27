@@ -114,8 +114,6 @@ def install(src, dst):
 
 if __name__ == '__main__':
 
-    print __file__
-    sys.exit(2)
     bin_path = os.getenv('HOME') + '/.bin/munch'
     src = os.path.realpath(__file__) # current filepath
     dst = os.getenv('HOME') + '/.bin/' # bin directory
