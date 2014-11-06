@@ -1,7 +1,7 @@
 munch
 =====
 
-A clever little script for installing WP and dependencies in seconds.
+A clever little script which utilises [lunchbox](https://github.com/bigspring/lunchbox) to install WP and dependencies in seconds.
 
 instructions
 ------------
