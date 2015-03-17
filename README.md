@@ -26,12 +26,6 @@ options
 
 `munch -b BRANCH` or `munch --branch BRANCH` will force munch to use a [lunchbox](https://github.com/bigspring/lunchbox) branch called 'BRANCH', if one exists.
 
-```
-munch -h << Display help (exits script)
-munch -n << NAME       Name project directory
-munch -b << BRANCH   Specify [Lunchbox](https://github.com/bigspring/lunchbox) branch
-```
-
 ACHTUNG!
 --------
 
