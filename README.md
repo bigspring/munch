@@ -6,26 +6,25 @@ A clever little script which utilises [lunchbox](https://github.com/bigspring/lu
 instructions
 ------------
 
-Run the script from the repo to install munch (sudo required):
+Run the script from the repo to install munch (sudo usually required as a file is created in `/usr/local/bin`):
 ```
 sudo ./munch.py
 ```
+This will reinstall existing versions of munch also.
 
 Thereafter you can simply navigate to your desired directory and run:
 ```
 munch
 ```
-The former command will ALWAYS reinstall.
 
 options
 -------
 
-The following command line arguments are available:
-```
-munch -h (or --help)            Display help (exits script)
-munch -n (or --name) NAME       Name project directory
-munch -b (or --branch) BRANCH   Specify [Lunchbox](https://github.com/bigspring/lunchbox) branch
-```
+`munch -h` or `munch --help` will display some usage documentation.
+
+`munch -n NAME` or `munch --name NAME` will assign a name to the new project. If left unspecified, the munch process will prompt you anyway.
+
+`munch -b BRANCH` or `munch --branch BRANCH` will force munch to use a [lunchbox](https://github.com/bigspring/lunchbox) branch called 'BRANCH', if one exists.
 
 ACHTUNG!
 --------
