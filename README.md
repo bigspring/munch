@@ -22,7 +22,9 @@ options
 
 `munch -h` or `munch --help` will display some usage documentation.
 
-`munch -n NAME` or `munch --name NAME` will assign a name to the new project. If left unspecified, the munch process will prompt you anyway.
+`munch -u` or `munch --update` will update munch to the latest version.
+
+`munch -n NAME` or `munch --name NAME` will assign a name to the new project. If left unspecified, the munch process will prompt for one.
 
 `munch -b BRANCH` or `munch --branch BRANCH` will force munch to use a [lunchbox](https://github.com/bigspring/lunchbox) branch called 'BRANCH', if one exists.
 
