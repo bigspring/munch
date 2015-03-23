@@ -6,9 +6,9 @@ A clever little script which utilises [lunchbox](https://github.com/bigspring/lu
 instructions
 ------------
 
-Run the script from the repo to install munch (sudo usually required as a file is created in `/usr/local/bin`):
+Run the script from the repo to install munch (sudo possibly required for use with `/usr/local/bin`):
 ```
-sudo ./munch.py
+./munch.py
 ```
 This will reinstall existing versions of munch also.
 
